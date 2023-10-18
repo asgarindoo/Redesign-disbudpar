@@ -259,7 +259,59 @@ img.galeri {
     font-size: 1rem;
 
 }
+/*Slider*/
+.main-wrapper {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
 
+slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+.dot {
+    position:absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid var(--background);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+
+}
+
+    .dot:nth-child(1) {
+        top: 35px;
+        right: 35px;
+    }
+
+    .dot:nth-child(2) {
+        top: 35px;
+        right: 65px;
+    }
+
+    .dot:nth-child(3) {
+        top: 35px;
+        right: 95px;
+    }
+    
+    .dot:nth-child(4) {
+        top: 35px;
+        right: 125px;
+    }
+
+
+    .dot.active {
+        background-color: var(--background);
+    }
 /*Search Button*/
 
 .search {
@@ -301,11 +353,11 @@ img.galeri {
     }
 
         .search button:hover {
-            background: var(--accent); /* Mengganti warna latar belakang tombol saat hover */
+            background: var(--accent);
         }
 
         .search button:active {
-            box-shadow: 0 0 12px rgba(225, 225, 225, 0.5); /* Mengubah efek bayangan saat tombol ditekan */
+            box-shadow: 0 0 12px rgba(225, 225, 225, 0.5);
         }
 
         .search button:focus {
