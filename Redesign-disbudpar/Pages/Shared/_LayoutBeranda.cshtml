@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Redesign_disbudpar.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar-beranda">
+            <div class="navbar-nav-beranda">
+                <ul class="navbar-collapse-beranda">
+                    <li class="nav-item-beranda">
+                        <a class="nav-link-beranda" asp-area="" asp-page="/Index">Beranda</a>
+                    </li>
+                    <li class="nav-item-beranda">
+                        <a class="nav-link-beranda" asp-area="" asp-page="/Profile">Profile</a>
+                    </li>
+                    <li class="nav-item-beranda">
+                        <a class="nav-link-beranda" asp-area="" asp-page="/Wisata">Wisata</a>
+                    </li>
+                    <li class="nav-item-beranda">
+                        <a class="nav-link-beranda" asp-area="" asp-page="/Informasi">Informasi</a>
+                    </li>
+                    <li class="nav-item-beranda">
+                        <a class="nav-link-beranda" asp-area="" asp-page="/Media">Media</a>
+                    </li>
+                    <li class="nav-item-beranda">
+                        <a class="nav-link-beranda" asp-area="" asp-page="/Dokumentasi">Dokumentasi</a>
+                    </li>
+                    <li class="nav-item-beranda">
+                        <a class="nav-link-beranda" asp-area="" asp-page="/Peta">Peta</a>
+                    </li>
+                    <li class="nav-item-beranda">
+                        <a class="nav-link-beranda" asp-area="" asp-page="/Pelayanan-Publik">Pelayanan Publik</a>
+                    </li>
+                    <li class="nav-item-beranda">
+                        <a class="nav-link-beranda" asp-area="" asp-page="/Kalender-Kegiatan">Kalender Kegiatan</a>
+                    </li>
+                    <li class="nav-item-beranda">
+                        <a class="nav-link-beranda" asp-area="" asp-page="/PPID">PPID</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="main-footer">
+                <div class="Halaman">
+                    <h5>Halaman</h5>
+                    <ul>
+                        <li>Beranda</li>
+                        <li>Profile</li>
+                        <li>Wisata</li>
+                        <li>Informasi</li>
+                        <li>Media</li>
+                        <li>Dokumentasi</li>
+                        <li>Peta</li>
+                        <li>Kalender Publik</li>
+                        <li>Layanan Kegiatan</li>
+                        <li>PPID</li>
+                    </ul>
+                </div>
+                <div class="Kontak-Kami">
+                    <h5>Kontak Kami</h5>
+                    <p>
+                        Alamat Kantor
+                        Dinas Kebudayaan dan Pariwisata
+                        Kabupaten Brebes
+                        Jl. Jend. A. Yani No. 87 Brebes
+                    </p>
+                </div>
+                <div class="Link-Terkait">
+                    <h5>Link Terkait</h5>
+                    <ul>
+                        <li>Kemenparekraf</li>
+                        <li>VisitJawaTengah</li>
+                        <li>IndonesiaKaya</li>
+                        <li>Kemdikbud</li>
+                        <li>Jatengprov</li>
+                        <li>Brebeskab</li>
+                    </ul>
+                </div>
+                <div class="Peta-Kantor">
+                    <h5>Peta Kantor</h5>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3961.144866868613!2d109.04908000000002!3d-6.87324!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fba7f10e52f2d%3A0x600ef5c2deee397a!2sDinas%20Pariwisata%20Kabupaten%20Brebes!5e0!3m2!1sid!2sid!4v1697552029002!5m2!1sid!2sid"
+                            width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="footer-bawah">
+                &copy; 2023 - Redesign_disbudpar - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/scrollNav.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

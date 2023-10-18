@@ -45,39 +45,64 @@ body {
     height: 50px;
     display: flex;
     border-bottom: 2px solid var(--primary);
-  /*z-index: 999;
+    /*z-index: 999;
     position: fixed;*/
 }
 
-.navbar-nav {
+.navbar-beranda {
+    background-color: white;
+    width: 100%;
+    height: 50px;
     display: flex;
-    margin: 0;
-
+    align-items: center;
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    position: absolute;
+    top: 590px;
+    z-index: 99999;
+    transition: position 0.2s;
 }
 
-.nav-item {
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+}
+
+.navbar-nav,
+.navbar-nav-beranda {
+    display: flex;
+    margin: 0;
+}
+
+.nav-item,
+.nav-item-beranda {
     display: flex;
     padding: 0 20px 0 50px;
     margin-left: 0;
 }
 
-.navbar-collapse {
+.navbar-collapse,
+.navbar-collapse-beranda {
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-.navbar-collapse > li{
-    list-style-type:none;
-    font-size:medium;
-}
+    .navbar-collapse > li,
+    .navbar-collapse-beranda > li {
+        list-style-type: none;
+        font-size: medium;
+    }
 
-.nav-link {
+.nav-link,
+.nav-link-beranda {
     color: var(--text);
+    text-decoration: none;
 }
 
-.nav-link:hover {
-    color: var(--accent);
+    .nav-link:hover,
+    .nav-link-beranda:hover {
+        color: var(--accent);
     }
 
 /*----------------------Page Beranda-----------------------*/
@@ -235,6 +260,58 @@ img.galeri {
 
 }
 
+/*Search Button*/
+
+.search {
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    top: 520px;
+    left: 80px;
+    margin: 150px auto;
+    background: var(--primary);
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+}
+
+    .search input {
+        width: 80%;
+        padding: 10px;
+        float: left;
+        color: var(--accent);
+        border: 2px solid var(--primary);
+        background: var(--background);
+        border-radius: 5px 0 0 5px;
+    }
+
+        .search input:focus {
+            outline: 0;
+        }
+
+    .search button {
+        float: right;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        height: 100%;
+        width: 20%;
+        color: var(--accent);
+        background: var(--primary);
+        border-radius: 0 5px 5px 0;
+    }
+
+        .search button:hover {
+            background: var(--accent); /* Mengganti warna latar belakang tombol saat hover */
+        }
+
+        .search button:active {
+            box-shadow: 0 0 12px rgba(225, 225, 225, 0.5); /* Mengubah efek bayangan saat tombol ditekan */
+        }
+
+        .search button:focus {
+            outline: 0;
+        }
+
 /*Section Wisata*/
 .wisata {
     min-height: 300vh;
@@ -244,7 +321,7 @@ img.galeri {
     text-align: center;
     position: absolute;
     right: 34%;
-    padding-top: 50px;
+    padding-top: 90px;
     align-items: center;
 }
 
@@ -437,7 +514,7 @@ button:hover {
 
 /*Section Berita*/
 .Berita {
-    min-height: 300vh;
+    min-height: 380vh;
 }
 
 .Berita-Kiri{
