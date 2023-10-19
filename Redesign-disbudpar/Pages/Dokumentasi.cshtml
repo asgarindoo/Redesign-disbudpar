@@ -3,4 +3,122 @@
 @{
 }
 
-<p>Page Dokumentasi</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<head>
+    <script>
+        $(document).ready(function () {
+            $(".tab-nav-wrapper li.active").click();
+            $($(".tab-nav-wrapper li.active a").attr("href")).show();
+
+            $(".tab-nav-wrapper li").click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $(".tab-nav-wrapper li").removeClass("active");
+                $(this).addClass("active");
+
+                var target = $(this).find("a").attr("href");
+                $(".tab-content-wrapper").find(".tab-content").hide();
+                $(".tab-content-wrapper").find(target).show();
+            })
+        });
+    </script>
+</head>
+
+<div class="tabs">
+    <div class="tab-nav-wrapper">
+        <ul>
+            <li class="active"><a href="#tab1">Video</a></li>
+            <li><a href="#tab2">Foto</a></li>
+        </ul>
+    </div>
+    <div class="tab-content-wrapper">
+        <div id="tab1" class="tab-content" style="display:none;">
+            <div class="card-video-container">
+
+                <div class="card-video">
+                    <iframe src="https://www.youtube.com/embed/B-5gSYLdqUQ?si=aUE0KBJpPBtTVcbD"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>TCV Disbudpar Brebes 2020</h2>
+                </div>
+
+                <div class="card-video">
+                    <iframe  src="https://www.youtube.com/embed/rJRk_TshNN8?si=6IM6PAWXtqBd2g_e"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>TCV Treaser Disbudpar Brebes 2020</h2>
+                </div>
+
+                <div class="card-video">
+                    <iframe src="https://www.youtube.com/embed/rBUg2mytSZw?si=54XlUsiTrdORL8TU"
+                             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                   gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>Lomba 10 Besar</h2>
+                </div>
+
+                <div class="card-video">
+                    <iframe src="https://www.youtube.com/embed/7CWNHrVKjUA?si=0tObUyqvGGQygCXO"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>Juara Favorit</h2>
+                </div>
+
+                <div class="card-video">
+                    <iframe src="https://www.youtube.com/embed/L3l5GbjY4uE?si=RdVqF352e1mmpTH3"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>Rudad Desa Pamulihan</h2>
+                </div>
+
+                <div class="card-video">
+                    <iframe  src="https://www.youtube.com/embed/8e5H2S8x2Mg?si=1fLKaXeJec46tX13"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>Budaya Brebes</h2>
+                </div>
+
+                <div class="card-video">
+                    <iframe src="https://www.youtube.com/embed/UayKpl9I52E?si=difPVVmwEbauQuGl"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>Mangrovesari Brebes</h2>
+                </div>
+
+                <div class="card-video">
+                    <iframe src="https://www.youtube.com/embed/6xIOr2TSRAM?si=PT0VQlIxaBqxrc-f"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>Jalawastu</h2>
+                </div>
+
+                <div class="card-video">
+                    <iframe  src="https://www.youtube.com/embed/RCeNPcRW5ic?si=yhqNKy44r9SGxCZK"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>Batik Salem Brebes</h2>
+                </div>
+
+                <div class="card-video">
+                    <iframe src="https://www.youtube.com/embed/z5DHjhNQmhc?si=ziK2r4B8lO1TGXOX"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>Jejak Jajak Bumi Ayu</h2>
+                </div>
+
+                <div class="card-video">
+                    <iframe  src="https://www.youtube.com/embed/7X3qXPiytfE?si=0NpB6SDSbCfoeVIy"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>Mapag Kabagjaan Bantarkawung</h2>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="tab2" class="tab-content" style="display:none;">
+            Content 2
+        </div>
+    </div>
+</div>
