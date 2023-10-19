@@ -20,6 +20,13 @@
         <h3>Dinas Kebudayaan dan Pariwisata <br />Kota Brebes</h3>
     </div>
 
+    <div class="sosial-media">
+        <a href="https://www.youtube.com/channel/UCv6c93wAPmgpaR14822V_GQ"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.instagram.com/pariwisata.dinbudpar.brebes/?hl=id"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/infobrebesnesia?locale=ms_MY"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com/pemkab_brebes"><i class="bi bi-twitter-x"></i></a>
+    </div>
+
     <div class="title-text">
         <h1>Kabupaten <br />Brebes</h1>
     </div>
@@ -192,7 +199,7 @@
         </div>
     </div>
     <div class="Button-Wisata">
-        <button asp-page="~/Wisata">Lihat Semua Tour</button>
+        <button asp-page="~/Pages/Wisata.cshtml">Lihat Semua Tour</button>
     </div>
     <div class="circle">
         <p id="circle1"></p>
@@ -213,7 +220,11 @@
 
     <div class="main-berita">
         <div class="Berita-Kiri">
-            <h6>Postingan yang disematkan</h6>
+            <div class="Pinned">
+                <i class="bi bi-pin-angle-fill"></i>
+                <h6>Postingan yang disematkan</h6>
+            </div>
+            
             <div class="Pinned-Berita">
                 <h2 class="Judul">Festival Ekonomi Kreatif Menggenjot Kebangkitan UMKM</h2>
                 <h6 class="Info-Post">Di posting 18 juli 2023, oleh Mahmud</h6>
@@ -232,11 +243,26 @@
                     ekonomi kreatif di Pendopo cadika, Waduk MAhalayu, Banjarharjo, Brebes (15/7).
                 </p>
                 <br />
-                <p>Baca Selengkapnya</p>
+                <div class="main-baca">
+                    <div class="text-baca-selegkapnya">
+                        <p>Baca Selengkapnya</p>
+                    </div>
+                    <div class="baca-selengkapnya-main">
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+
+                </div>
+                
                 <div class="garis-bawah"></div>
                 <div class="reaction">
-                    <h5>Komentar</h5>
-                    <h5>Share</h5>
+                    <div class="coment">
+                        <i class="bi bi-chat-dots-fill"></i>
+                        <h5>Komentar</h5>
+                    </div>
+                    <div class="share">
+                        <i class="bi bi-share-fill"></i>
+                        <h5>Share</h5>
+                    </div>
                 </div>
             </div>
             <div class="Anak-Berita">
@@ -253,11 +279,21 @@
                         </p>     
                     </div>
                     <br />
-                    <p>Baca Selengkapnya</p>
+                    <div class="baca-selengkapnya">
+                        <p>Baca Selengkapnya</p>
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+
                     <div class="garis-bawah"></div>
                     <div class="reaction">
-                        <h5>Komentar</h5>
-                        <h5>Share</h5>
+                        <div class="coment">
+                            <i class="bi bi-chat-dots-fill"></i>
+                            <h5>Komentar</h5>
+                        </div>
+                        <div class="share">
+                            <i class="bi bi-share-fill"></i>
+                            <h5>Share</h5>
+                        </div>
                     </div>
                 </div>
                 <div class="Berita2">
@@ -272,11 +308,21 @@
                        </p>
                     </div>
                     <br />
-                    <p>Baca Selengkapnya</p>
+                    <div class="baca-selengkapnya">
+                        <p>Baca Selengkapnya</p>
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+
                     <div class="garis-bawah"></div>
                     <div class="reaction">
-                        <h5>Komentar</h5>
-                        <h5>Share</h5>
+                        <div class="coment">
+                            <i class="bi bi-chat-dots-fill"></i>
+                            <h5>Komentar</h5>
+                        </div>
+                        <div class="share">
+                            <i class="bi bi-share-fill"></i>
+                            <h5>Share</h5>
+                        </div>
                     </div>
                 </div>
                 <div class="Berita3">
@@ -292,36 +338,84 @@
                         </p>
                     </div>
                     <br />
-                    <p>Baca Selengkapnya</p>
+                    <div class="baca-selengkapnya">
+                        <p>Baca Selengkapnya</p>
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+
                     <div class="garis-bawah"></div>
                     <div class="reaction">
-                        <h5>Komentar</h5>
-                        <h5>Share</h5>
+                        <div class="coment">
+                            <i class="bi bi-chat-dots-fill"></i>
+                            <h5>Komentar</h5>
+                        </div>
+                        <div class="share">
+                            <i class="bi bi-share-fill"></i>
+                            <h5>Share</h5>
+                        </div>     
                     </div>
                 </div>
         </div>
         <div class="Berita-Kanan">
             <aside>
                     <div class="info-box info-box-1">
-                        <h3>Informasi Penting 1</h3>
-                        <p>Ini adalah beberapa informasi penting yang bisa Anda tampilkan di sini.</p>
+                        <div class="city-profile">
+                            <img src="~/Assets/foto-alun-alun-brebes-39.jpg" alt="Foto Kota Brebes">
+                            <h3>Kota Brebes</h3>     
+                            <p>Kota Brebes adalah sebuah kota yang terletak di Provinsi Jawa Tengah,
+                                Indonesia. Kota ini memiliki sejarah dan budaya yang kaya, serta menjadi
+                                pusat ekonomi dan perdagangan di wilayahnya. Dikenal dengan keindahan alamnya
+                                dan keanekaragaman budayanya, Brebes adalah tempat yang menarik bagi pengunjung
+                                dari berbagai daerah.</p>
+                            <ul>
+                                <li><strong>Penduduk:</strong> Sekitar 1 juta jiwa (perkiraan)</li>
+                                <li><strong>Luas Wilayah:</strong> Sekitar 1.893 km²</li>
+                            </ul>
+                        </div>
+
                     </div>
                     <div class="info-box info-box-2">
-                        <h3>Informasi Penting 2</h3>
-                        <p>Ini adalah informasi penting lainnya.</p>
+                        <div id="weather-widget">
+                            <h2>Cuaca saat ini</h2>
+                            <br />
+                            <p>Lokasi: <span id="location"></span></p>
+                            <p>Suhu: <span id="temperature"></span>°C</p>
+                            <p>Deskripsi: <span id="condition"></span></p>
+                        </div>
                     </div>
                     <div class="info-box info-box-3">
-                        <h3>Informasi Penting 3</h3>
-                        <p>Ini adalah informasi penting yang berbeda lagi.</p>
+                        <h2>Informasi Kontak</h2>
+                        <address>
+                            <p>
+                                <strong>Alamat Kantor:</strong><br>
+                                Dinas Kebudayaan dan Pariwisata<br>
+                                Kabupaten Brebes<br>
+                                Jl. Jend. A. Yani No. 87 Brebes                                                              
+                            </p>
+
+                            <p>
+                                <strong>Nomor Telepon:</strong><br>
+                                 (+62) 85-3342-6745
+                            </p>
+
+                            <p>
+                                <strong>Email:</strong><br>
+                                <a href="mailto:info@contoh.com"> alisofyan.poltek@gmail.com</a>
+                            </p>
+
+                            <p>
+                                <strong>Jam Operasional:</strong><br>
+                                Senin - Jumat: <br />8:00 AM - 16:00 PM
+                            </p>
+                        </address>
                     </div>
                     <div class="info-box info-box-4">
-                        <h3>Informasi Penting 4</h3>
-                        <p>Ini adalah informasi penting yang berbeda lagi.</p>
+                            <h2>Acara Mendatang</h2>
                     </div>
             </aside>
         </div>
             <div class="Button-Berita">
-                <button asp-page="~/Media">Lihat Berita</button>
+                <button asp-page="~/Pages/Media.cshtml">Lihat Berita</button>
             </div>
         </div>
     </div>

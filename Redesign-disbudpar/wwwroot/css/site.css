@@ -124,7 +124,7 @@ body {
 
 .title-text h1 {
     position:absolute;
-    padding-top:100px;
+    padding-top:50px;
     align-items:center;
     font-size:3rem;
     font-family: "Space Grotesk", sans-serif;
@@ -178,7 +178,7 @@ img.pesona {
 
 img.jateng {
     width: 90px;
-    height: 80px;
+    height: 70px;
 }
 
 img.galeri {
@@ -186,9 +186,28 @@ img.galeri {
     height: 60px;
 }
 
+.sosial-media {
+    position: absolute;
+    top: 420px;
+    right: 69%;
+    display: flex;
+    flex-direction: column;
+}
+    .sosial-media a {
+        text-decoration: none;
+        color: var(--accent);
+    }
+    .sosial-media a:visited {
+        text-decoration: none;
+        color: var(--accent);
+    }
+    .sosial-media i {
+        font-size: 24px;
+    }
+
 /*Section Sambutan*/
-.sambutan{
-    min-height:100vh;
+.sambutan {
+    min-height: 100vh;
 }
 
 .element img {
@@ -268,7 +287,7 @@ img.galeri {
     text-align: center;
 }
 
-slides {
+.slides {
     display: flex;
     transition: transform 0.5s ease;
     overflow: hidden;
@@ -310,7 +329,7 @@ slides {
 
 
     .dot.active {
-        background-color: var(--background);
+        background-color: var(--accent);
     }
 /*Search Button*/
 
@@ -573,6 +592,14 @@ button:hover {
     margin-top:70px;
 }
 
+.Pinned{
+    display:flex;
+    color: var(--accent);
+}
+.Pinned i{
+    margin-right:10px;
+}
+
 .title-section-Berita {
     text-align: center;
     position: absolute;
@@ -724,39 +751,148 @@ button:hover {
     margin-top: 40px;
 }
 
+.coment,
+.share{
+    display:flex;
+    gap:10px;
+}
+
+.main-baca {
+    display: flex;
+    gap: 10px;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.baca-selengkapnya-main{
+    margin-top:20px;
+}
+
+.baca-selengkapnya {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: var(--accent);
+    cursor: pointer;
+}
+
 aside {
-    position:absolute;
-    top:3890px;
-    right:80px;
+
+    background: transparent;
+    position: absolute;
+    top: 3890px;
+    right: 80px;
     padding: 20px;
 }
 
 .info-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
     padding: 20px;
-    background-color: var(--secondary);
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
+    margin: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .info-box-1 {
     width: 300px;
-    height: 400px;
+    height: 600px;
 }
+
+.city-profile {
+    text-align: left;
+    align-items: center;
+}
+
+    .city-profile img {
+        width: 100%;
+        height: 100px;
+        justify-content:center;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-right: 20px;
+    }
+    .city-profile h3 {
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
+    
+    .city-profile p {
+        margin-top:20px;
+        font-size:16px;
+    }
+
+    .city-profile ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+        
+    }
+
+        .city-profile ul li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
 
 .info-box-2 {
     width: 300px;
-    height: 200px;
+}
+
+#weather-widget {
+    text-align: left;
+}
+#weather-widget h2 {
+    font-size: 1.5rem;
+    text-decoration:underline;
+}
+
+
+
+#temperature {
+    font-size: 1.5rem;
+    color: var(--accent);
 }
 
 .info-box-3 {
     width: 300px;
-    height: 700px;
+    height: 400px;
+}
+
+    .info-box-3 h2 {
+        font-size: 1.5rem;
+        text-decoration: underline;
+        margin-bottom: 10px;
+    }
+
+.info-box-3 address {
+    font-size: 16px;
+}
+
+.info-box-3 address p {
+        margin: 10px 0;
+    }
+
+.info-box-3 strong {
+    font-weight: 400;
+}
+
+.info-box-3 a {
+    color: var(--accent);
+    text-decoration: none;
 }
 
 .info-box-4 {
     width: 300px;
-    height: 900px;
+    height: 300px;
 }
+
+.info-box-4 h2 {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
 
 
 /*----------------------Page Profile-----------------------*/
@@ -1140,3 +1276,387 @@ footer {
     ::-webkit-scrollbar-thumb:hover {
         background: var(--accent);
     }
+
+/* Media Query for Small Screens (e.g., Mobile) */
+@media (max-width: 767px) {
+
+    .navbar-beranda{
+        display:none;
+    }
+
+    /* Mengubah ukuran font judul pada hero section */
+    .title-text h1 {
+        font-size: 5rem;
+        position: absolute;
+        z-index: 10;
+        color: var(--background);
+        top: 300px;
+        left: 450px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    /* Mengurangi ukuran logo pada hero section */
+    .dibudpar-logo img {
+        position: absolute;
+        top: 10px;
+        left: 450px;
+        width: 50px;
+        height: 55px;
+        border: none;
+    }
+
+    .logo-hero h3 {
+        display: none;
+    }
+
+
+    .dibudpar-logo h4 {
+        display: none;
+    }
+
+    .link-terkait{
+      display:none;
+    }
+
+    /* Menyesuaikan posisi sosial media */
+    .sosial-media {
+        top: 30px;
+        right:30px;
+        flex-direction:row;
+        gap:20px;
+    }
+
+    .hero-section::before{
+        display:none;
+    }
+
+    .main-wrapper {
+        top: 80px;
+    }
+    .slides {
+      filter: brightness(50%);
+    }
+
+    .dot{
+        z-index:10;
+    }
+    /* Mengubah lebar tombol pencarian */
+    .search {
+        width: 83%;
+    }
+
+        /* Menyesuaikan lebar input pencarian */
+        .search input {
+            width: 80%;
+        }
+
+    .element img {
+        width: 130px;
+        height: auto;
+        z-index: -1;
+        position: absolute;
+        right: 0;
+        top: 800px;
+    }
+
+    .title-section-sambutan {
+        position: absolute;
+        top: 800px;
+        right: 250px;
+        padding-top: 30px;
+        align-items: center;
+    }
+
+        .title-section-sambutan h2 {
+            
+            font-size: 2rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 500;
+            color: var(--accent);
+        }
+
+        .title-section-sambutan img {
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-left: 0;
+            width: 400px;
+        }
+
+    .kepala-dinas {
+        display:none;
+    }
+
+    .foto-kepala-dinas {
+        display: none;
+    }
+
+        .foto-kepala-dinas h4 {
+            display: none;
+        }
+
+        .foto-kepala-dinas h5 {
+            display: none;
+        }
+
+    .text-sambutan {
+        background-color: var(--secondary);
+        max-width: 100%;
+        height: 500px;
+        padding: 40px;
+        font-size: 1rem;
+        text-align:center;
+    }
+
+    .title-section-wisata {
+        position: absolute;
+        top: 1550px;
+        right: 250px;
+        padding-top: 30px;
+        align-items: center;
+    }
+
+    .Button-Wisata {
+        right: 42%;
+    }
+
+    .circle {
+        right: 43%;
+    }
+
+    .title-section-Berita {
+        right: 26%;
+    }
+
+    aside{
+        display:none;
+    }
+
+    .Berita-Kiri{
+    margin:20px;
+    }
+
+    .Button-Berita{
+        top:6650px;
+        right:43%;
+    }
+
+    .Halaman, .Kontak-Kami, .Link-Terkait .Peta-Kantor {
+        width: 100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navbar-beranda {
+        height: 40px;
+        display:none;
+    }
+
+    .nav-item-beranda {
+        padding: 0 50px;
+    }
+
+    .title-text h1 {
+        font-size: 5rem;
+        position: absolute;
+        z-index: 10;
+        color: var(--background);
+        top: 300px;
+        left: 400px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .dibudpar-logo img {
+        position:absolute;
+        top:10px;
+        left:400px;
+        width: 50px;
+        height: 55px;
+        border: none;
+    }
+
+    .logo-hero h3 {
+        display: none;
+    }
+
+
+    .dibudpar-logo h4{
+        display:none;
+    }
+
+    .link-terkait {
+        display: none;
+    }
+
+    .sosial-media {
+        top: 30px;
+        right: 30px;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .hero-section::before {
+        display: none;
+    }
+
+    .main-wrapper {
+        top: 80px;
+    }
+
+    .slides {
+        filter: brightness(50%);
+    }
+
+    .dot {
+        z-index: 10;
+    }
+
+    .search {
+        top:500px;
+        width: 83%;
+    }
+
+
+        .search input {
+            width: 80%;
+        }
+
+    .element img {
+        width: 130px;
+        height: auto;
+        z-index: -1;
+        position: absolute;
+        right: 0;
+        top: 800px;
+    }
+
+    .title-section-sambutan {
+        position: absolute;
+        top: 800px;
+        right: 200px;
+        padding-top: 30px;
+        align-items: center;
+    }
+
+        .title-section-sambutan h2 {
+            font-size: 2rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 500;
+            color: var(--accent);
+        }
+
+        .title-section-sambutan img {
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-left: 0;
+            width: 400px;
+        }
+
+    .kepala-dinas {
+        display: none;
+    }
+
+    .foto-kepala-dinas {
+        display: none;
+    }
+
+        .foto-kepala-dinas h4 {
+            display: none;
+        }
+
+        .foto-kepala-dinas h5 {
+            display: none;
+        }
+
+    .text-sambutan {
+        background-color: var(--secondary);
+        max-width: 100%;
+        height: 500px;
+        padding: 40px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .title-section-wisata {
+        position: absolute;
+        top: 1550px;
+        right: 190px;
+        padding-top: 30px;
+        align-items: center;
+    }
+
+    .Button-Wisata {
+        right: 42%;
+    }
+
+    .circle {
+        right: 43%;
+    }
+
+    .title-section-Berita {
+        right: 23%;
+    }
+
+    aside {
+        position: absolute;
+        top: 3000px;
+        right:30px;
+    }
+
+    .Berita-Kiri {
+        position: absolute;
+        margin: 20px;
+        top: 3900px;
+        left:0;
+        max-width:780px;
+    }
+
+    .Pinned-Berita img{
+        width:780px;
+    }
+
+    .Button-Berita {
+        top: 2800px;
+        right: 43%;
+    }
+
+    .info-box {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .info-box-1 {
+        height: 1100px;
+    }
+
+    .city-profile {
+        align-items: center;
+    }
+
+        .city-profile img {
+            width: 100%;
+            height: 500px;
+            justify-content: center;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+    .info-box-3 {
+        height: 400px;
+    }      
+    .info-box-4 {
+        height: 700px;
+    }
+
+    .Halaman, .Kontak-Kami, .Link-Terkait .Peta-Kantor {
+        width: 100px;
+    }
+}
