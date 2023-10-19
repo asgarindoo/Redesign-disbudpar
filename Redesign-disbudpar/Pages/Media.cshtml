@@ -3,4 +3,64 @@
 @{
 }
 
-<p>Page Media</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<head>
+    <script>
+        $(document).ready(function () {
+            $(".tab-nav-wrapper li.active").click();
+            $($(".tab-nav-wrapper li.active a").attr("href")).show();
+
+            $(".tab-nav-wrapper li").click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $(".tab-nav-wrapper li").removeClass("active");
+                $(this).addClass("active");
+
+                var target = $(this).find("a").attr("href");
+                $(".tab-content-wrapper").find(".tab-content").hide();
+                $(".tab-content-wrapper").find(target).show();
+            })
+        });
+    </script>
+</head>
+
+<div class="tabs">
+    <div class="tab-nav-wrapper">
+        <ul>
+            <li class="active"><a href="#tab1">Berita</a></li>
+            <li><a href="#tab2">Artikel</a></li>
+        </ul>
+    </div>
+    <div class="tab-content-wrapper">
+        <div id="tab1" class="tab-content" style="display:none;">
+            <div class="card">
+                <h2 style="font-size: 35px">Berita Terkini: Kampus terbakar, mahasiswa dapat beasiswa gratis!</h2>
+                <h5>Heboh!!!!!, Dec 7, 2023</h5>
+                <div class="fakeimg" style="height:200px;">Image</div>
+                <p>Ditemukan gedung Teknik Informatika terbakar, tidak ada korban jiwa namun gedung 100% terbakar habis!</p>
+            </div>
+            <div class="card">
+                <h2 style="font-size: 35px">Berita Terkini: Kampus terbakar lagi, mahasiswa langsung lulus!</h2>
+                <h5>Heboh!!!!!, Dec 7, 2024</h5>
+                <div class="fakeimg" style="height:200px;">Image</div>
+                <p>Ditemukan gedung Teknik Informatika terbakar, tidak ada korban jiwa namun gedung 100% terbakar habis! Para mahasiswa langsung diluluskan tanpa skripsi!!!!!</p>
+            </div>
+        </div>
+        <div id="tab2" class="tab-content" style="display:none;">
+            <div class="card">
+                <h2 style="font-size: 35px">Surabaya, kota pahlawan.</h2>
+                <h5>20 Februari 2022</h5>
+                <div class="fakeimg" style="height:200px;">Image</div>
+                <p>Surabaya adalah kota pahlawan tercinta kita semua</p>
+            </div>
+            <div class="card">
+                <h2 style="font-size: 35px">Indonesia akhirnya merdeka!!!</h2>
+                <h5>17 Agustus 1945</h5>
+                <div class="fakeimg" style="height:200px;">Image</div>
+                <p>enak jamanku toh</p>
+            </div>
+        </div>
+    </div>
+</div>

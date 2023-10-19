@@ -3,4 +3,44 @@
 @{
 }
 
-<p>Page Peta</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<head>
+    <script>
+        $(document).ready(function () {
+            $(".tab-nav-wrapper li.active").click();
+            $($(".tab-nav-wrapper li.active a").attr("href")).show();
+
+            $(".tab-nav-wrapper li").click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $(".tab-nav-wrapper li").removeClass("active");
+                $(this).addClass("active");
+
+                var target = $(this).find("a").attr("href");
+                $(".tab-content-wrapper").find(".tab-content").hide();
+                $(".tab-content-wrapper").find(target).show();
+            })
+        });
+    </script>
+</head>
+
+<div class="tabs">
+    <div class="tab-nav-wrapper">
+        <ul>
+            <li class="active"><a href="#tab1">Peta Wisata</a></li>
+            <li><a href="#tab2">Peta Budaya</a></li>
+        </ul>
+    </div>
+    <div class="tab-content-wrapper" style="margin-bottom: 50px">
+        <div id="tab1" class="tab-content" style="display:none;">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1obRoHFwTO3khPn0T6xdzfZzC64CjaTMd&ll=-7.060204726973785%2C108.94817044999998&z=10"
+                    width="1200" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div id="tab2" class="tab-content" style="display:none;">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1N9E67Ih8P2uHnzR7LaiyugcfX2ZbVHw2&ll=-7.0599406669792355%2C108.96445725&z=10"
+                    width="1200" height="700" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
