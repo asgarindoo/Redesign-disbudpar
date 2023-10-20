@@ -8,5 +8,17 @@ namespace Redesign_disbudpar.Pages
         public void OnGet()
         {
         }
+
+        public static string chosenMap;
+        public async Task<IActionResult> OnPostWisata(object sender)
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+
+            return RedirectToPage("./PetaWisata", new { mapID = chosenMap });
+        }
     }
 }

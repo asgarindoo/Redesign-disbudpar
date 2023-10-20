@@ -3,16 +3,111 @@
 @{
 }
 
+<head>
+    <script type='text/javascript'>
+        function hide(clicked_id) {
+            switch(clicked_id)
+            {
+                case 'prosedur':
+                    document.getElementById("MainDiv").style.display = 'none';
+                    document.getElementById("ProsedurDiv").style.display = 'block';
+                    document.getElementById("LingSenDiv").style.display = 'none';
+                    document.getElementById("PerDatDiv").style.display = 'none';
+                    document.getElementById("SKMDiv").style.display = 'none';
+                    document.getElementById("FLPTDiv").style.display = 'none';
+                    break;
+
+                case 'lingsen':
+                    document.getElementById("MainDiv").style.display = 'none';
+                    document.getElementById("ProsedurDiv").style.display = 'none';
+                    document.getElementById("LingSenDiv").style.display = 'block';
+                    document.getElementById("PerDatDiv").style.display = 'none';
+                    document.getElementById("SKMDiv").style.display = 'none';
+                    document.getElementById("FLPTDiv").style.display = 'none';
+                    break;
+
+                case 'perdat':
+                    document.getElementById("MainDiv").style.display = 'none';
+                    document.getElementById("ProsedurDiv").style.display = 'none';
+                    document.getElementById("LingSenDiv").style.display = 'none';
+                    document.getElementById("PerDatDiv").style.display = 'block';
+                    document.getElementById("SKMDiv").style.display = 'none';
+                    document.getElementById("FLPTDiv").style.display = 'none';
+                    break;
+
+                case 'skm':
+                    document.getElementById("MainDiv").style.display = 'none';
+                    document.getElementById("ProsedurDiv").style.display = 'none';
+                    document.getElementById("LingSenDiv").style.display = 'none';
+                    document.getElementById("PerDatDiv").style.display = 'none';
+                    document.getElementById("SKMDiv").style.display = 'block';
+                    document.getElementById("FLPTDiv").style.display = 'none';
+                    break;
+
+                case 'flpt':
+                    document.getElementById("MainDiv").style.display = 'none';
+                    document.getElementById("ProsedurDiv").style.display = 'none';
+                    document.getElementById("LingSenDiv").style.display = 'none';
+                    document.getElementById("PerDatDiv").style.display = 'none';
+                    document.getElementById("SKMDiv").style.display = 'none';
+                    document.getElementById("FLPTDiv").style.display = 'block';
+                    break;
+            }
+        }
+    </script>
+</head>
+
 <section class="row-container">
 <div class="row">
     <div class="columnLeft">
-        <h2 style="">Pelayanan Publik</h2>
-        <h5>Prosedur</h5>
-        <h5>Lingkungan Seni</h5>
-        <h5>Permohonan Data</h5>
-        <h5>Survey Kepuasan Masyarakat</h5>
-        <h5>Form Laporan Pelaksanaan Tugas</h5>
+        <h2>Pelayanan Publik</h2>
+        <h5 id="prosedur" onclick="hide(this.id)"><a href="#">Prosedur</a></h5>
+        <h5 id="lingsen" onclick="hide(this.id)"><a href="#">Lingkungan Seni</a></h5>
+        <h5 id="perdat" onclick="hide(this.id)"><a href="#">Permohonan Data</a></h5>
+        <h5 id="skm" onclick="hide(this.id)"><a href="#">Survey Kepuasan Masyarakat</a></h5>
+        <h5 id="flpt" onclick="hide(this.id)"><a href="#">Form Laporan Pelaksanaan Tugas</a></h5>
     </div>
-    <div class="columnRight">test</div>
+    <div class="columnRight">
+        <div id="MainDiv">
+            <h2>Menu Pelayanan Publik</h2>
+            <h5>Silahkan gunakan menu dibagian kiri layar anda untuk menavigasi page ini.</h5>
+        </div>
+        <div id="ProsedurDiv" style="display: none">
+            <h2>Belum ada Prosedur yang dikeluarkan</h2>
+        </div>
+        <div id="LingSenDiv" style="display: none">
+            <h2>Coming Soon</h2>
+        </div>
+        <div id="PerDatDiv" style="display: none">
+                <form action="">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Alamat Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tujuan">Tujuan Permohonan:</label>
+                        <textarea id="tujuan" name="tujuan" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Kirim Permohonan">
+                    </div>
+                </form>
+        </div>
+        <div id="SKMDiv" style="display: none"> 
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfH-Sl_RpkiWbltwOa4EtbF9wFHJVuCXY7xbyLBOvboJuLu_Q/viewform" 
+                width="1080" height="743" frameborder="0" scrolling="yes"></iframe>
+        </div>
+        <div id="FLPTDiv" style="display: none">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe5NkFSIXVIT4Ki7z38xjVr5G8ITsBPeTA68dIgwYsPvQh_Bw/viewform"
+                width="1080" height="743" frameborder="0" scrolling="yes"></iframe>
+        </div>
+    </div>
 </div>
 </section>

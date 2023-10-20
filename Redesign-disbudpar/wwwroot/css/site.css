@@ -38,6 +38,25 @@ body {
     overflow-x: hidden;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+
+a:visited {
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+
+a:active {
+    text-decoration: none;
+}
+
 /*Navbar*/
 .navbar {
     background-color: white;
@@ -532,20 +551,41 @@ img.galeri {
         font-weight: 300;
     }
 
-.Button-Wisata {
+.Button-Wisata a{
     display: flex;
     position: absolute;
     top: 3400px;
-    right: 45%;
+    right: 44.5%;
     text-align: center;
+    background-color: white;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding:10px;
 }
 
-.Button-Berita {
+.Button-Wisata a:hover{
+    background-color: var(--accent);
+    color: var(--background);
+    border: 2px solid var(--accent);
+}
+
+.Button-Berita a {
     display: flex;
     position: absolute;
     top: 6500px;
     right: 46.5%;
     text-align: center;
+    background-color: white;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: 10px;
+}
+
+.Button-Berita a:hover {
+    background-color: var(--accent);
+    color: var(--background);
+    border: 2px solid var(--accent);
+
 }
 
 button {
@@ -1351,11 +1391,36 @@ footer {
     text-align: center;
 }
 
+.card-img {
+    border-radius:10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 150px;
+}
+.card-tab1 h4,
+.card-tab2 h4 {
+    font-weight:500;
+    font-size:large;
+}
+.card-tab1 p,
+.card-tab2 p {
+    font-weight:400;
+    font-size:small;
+}
+
+.visit{
+    position:relative;
+    padding-left:20px;
+    padding-right:20px;
+    top:40px;
+}
+
 /*----------------------Page Media-----------------------*/
 /* Left column */
 .leftcolumn {
-    float: left;
-    width: 75%;
+    justify-content: center;
+    width: 100%;
 }
 
 /* Fake image */
@@ -1366,11 +1431,16 @@ footer {
 }
 
 /* Add a card effect for articles */
-.card {
+.Section-Media{
+    min-height:500vh;
+}
+.Media-Berita {
+    position: absolute;
+    left: 15%;
     text-align: left;
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
+    justify-content: center;
+    width: 900px;
+    height: 2000px;
 }
 
 /*----------------------Page Dokumentasi-----------------------*/
@@ -1461,12 +1531,58 @@ footer {
     .columnLeft h5 {
         font-size: 15px;
         margin-bottom: 10px
+
+    }
+        .columnLeft a:visited {
+        color:var(--accent);
+    }
+        .columnLeft a:hover {
+        color:var(--text);
     }
 
 .columnRight {
     flex: 75%;
 }
 
+    .columnRight h2 {
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-weight: 400;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--accent);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: var(--secondary)
+}
+
+input[type="submit"] {
+    background-color: var(--background);
+    color: var(--accent);
+    padding: 10px 20px;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+}
+
+    input[type="submit"]:hover {
+        color:var(--background);
+        background-color: var(--accent);
+    }
 /*----------------------Pages PPID-----------------------*/
 
 
@@ -1623,7 +1739,7 @@ footer {
         align-items: center;
     }
 
-    .Button-Wisata {
+    .Button-Wisata a {
         right: 42%;
     }
 
@@ -1643,7 +1759,7 @@ footer {
         margin: 20px;
     }
 
-    .Button-Berita {
+    .Button-Berita a{
         top: 6650px;
         right: 43%;
     }
