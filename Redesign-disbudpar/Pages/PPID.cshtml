@@ -3,17 +3,289 @@
 @{
 }
 
+<head>
+    <script type='text/javascript'>
+        function hide(clicked_id) {
+            switch (clicked_id) {
+                case 'ipbp':
+                    document.getElementById("MainDiv").style.display = 'none';
+                    document.getElementById("IPBPDiv").style.display = 'block';
+                    document.getElementById("PKKDiv").style.display = 'none';
+                    document.getElementById("IPBDiv").style.display = 'none';
+                    document.getElementById("IKMDiv").style.display = 'none';
+                    document.getElementById("MSPDiv").style.display = 'none';
+                    document.getElementById("UMDiv").style.display = 'none';
+                    break;
+                case 'pkk':
+                    document.getElementById("MainDiv").style.display = 'none';
+                    document.getElementById("IPBPDiv").style.display = 'none';
+                    document.getElementById("PKKDiv").style.display = 'block';
+                    document.getElementById("IPBDiv").style.display = 'none';
+                    document.getElementById("IKMDiv").style.display = 'none';
+                    document.getElementById("MSPDiv").style.display = 'none';
+                    document.getElementById("UMDiv").style.display = 'none';
+                    break;
+                case 'ipb':
+                    document.getElementById("MainDiv").style.display = 'none';
+                    document.getElementById("IPBPDiv").style.display = 'none';
+                    document.getElementById("PKKDiv").style.display = 'none';
+                    document.getElementById("IPBDiv").style.display = 'block';
+                    document.getElementById("IKMDiv").style.display = 'none';
+                    document.getElementById("MSPDiv").style.display = 'none';
+                    document.getElementById("UMDiv").style.display = 'none';
+                    break;
+                case 'ikm':
+                    document.getElementById("MainDiv").style.display = 'none';
+                    document.getElementById("IPBPDiv").style.display = 'none';
+                    document.getElementById("PKKDiv").style.display = 'none';
+                    document.getElementById("IPBDiv").style.display = 'none';
+                    document.getElementById("IKMDiv").style.display = 'block';
+                    document.getElementById("MSPDiv").style.display = 'none';
+                    document.getElementById("UMDiv").style.display = 'none';
+                    break;
+                case 'msp':
+                    document.getElementById("MainDiv").style.display = 'none';
+                    document.getElementById("IPBPDiv").style.display = 'none';
+                    document.getElementById("PKKDiv").style.display = 'none';
+                    document.getElementById("IPBDiv").style.display = 'none';
+                    document.getElementById("IKMDiv").style.display = 'none';
+                    document.getElementById("MSPDiv").style.display = 'block';
+                    document.getElementById("UMDiv").style.display = 'none';
+                    break;
+                case 'um':
+                    document.getElementById("MainDiv").style.display = 'none';
+                    document.getElementById("IPBPDiv").style.display = 'none';
+                    document.getElementById("PKKDiv").style.display = 'none';
+                    document.getElementById("IPBDiv").style.display = 'none';
+                    document.getElementById("IKMDiv").style.display = 'none';
+                    document.getElementById("MSPDiv").style.display = 'none';
+                    document.getElementById("UMDiv").style.display = 'block';
+                    break;
+            }
+        }
+    </script>
+</head>
+
 <section class="row-container">
 <div class="row">
     <div class="columnLeft">
-        <h2 style="font-size: 30px; margin-top: 20px; margin-bottom: 20px">PPID</h2>
-        <h5>Informasi Profil Badan Publik</h5>
-        <h5>Program Kegiatan dan Keuangan</h5>
-        <h5>Informasi Pengadaan Barang</h5>
-        <h5>Index Kepuasan Masyarakat</h5>
-        <h5>Maklumat Standar Pelayanan</h5>
-        <h5>Usulan Masyarakat</h5>
+        <h2>PPID</h2>
+        <h5 id="ipbp" onclick="hide(this.id)"><a href="#">Informasi Profil Badan Publik</a></h5>
+        <h5 id="pkk" onclick="hide(this.id)"><a href="#">Program Kegiatan dan Keuangan</a></h5>
+        <h5 id="ipb" onclick="hide(this.id)"><a href="#">Informasi Pengadaan Barang</a></h5>
+        <h5 id="ikm" onclick="hide(this.id)"><a href="#">Index Kepuasan Masyarakat</a></h5>
+        <h5 id="msp" onclick="hide(this.id)"><a href="#">Maklumat Standar Pelayanan</a></h5>
+        <h5 id="um" onclick="hide(this.id)"><a href="#">Usulan Masyarakat</a></h5>
     </div>
-    <div class="columnRight">test</div>
+    <div class="columnRight">
+            <div id="MainDiv">
+                <h2>PPID</h2>
+                <h5>Silahkan gunakan menu dibagian kiri layar anda untuk menavigasi page ini.</h5>
+            </div>
+            <div id="IPBPDiv" style="display: none">
+                <h2>Informasi Profil Badan Publik</h2>
+                <h5>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Velit aliquet sagittis id consectetur purus ut. 
+                    Convallis aenean et tortor at risus viverra adipiscing. 
+                    Etiam dignissim diam quis enim lobortis scelerisque. 
+                    Neque laoreet suspendisse interdum consectetur libero. 
+                    Suspendisse potenti nullam ac tortor vitae purus faucibus. 
+                    Enim praesent elementum facilisis leo vel fringilla. 
+                    Eget dolor morbi non arcu risus quis. 
+                    Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque 
+                    eleifend. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. 
+                    Cras sed felis eget velit aliquet sagittis id. 
+                    Facilisi etiam dignissim diam quis enim lobortis. 
+                    Non blandit massa enim nec dui nunc mattis enim. 
+                    Sem integer vitae justo eget magna fermentum iaculis eu non. 
+                    Egestas sed sed risus pretium quam vulputate dignissim.
+                </h5>
+                <h5>
+                    Commodo ullamcorper a lacus vestibulum. Rhoncus mattis rhoncus urna neque. 
+                    Diam phasellus vestibulum lorem sed. Bibendum at varius vel pharetra. 
+                    In vitae turpis massa sed elementum tempus egestas sed. 
+                    Purus faucibus ornare suspendisse sed nisi. 
+                    Eget magna fermentum iaculis eu non diam phasellus. 
+                    Faucibus pulvinar elementum integer enim. 
+                    Mattis vulputate enim nulla aliquet. 
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. 
+                    Est velit egestas dui id. Cursus sit amet dictum sit amet justo donec. 
+                    Quis risus sed vulputate odio ut. Posuere morbi leo urna molestie at elementum eu. 
+                    Et tortor at risus viverra adipiscing at.
+                </h5>
+            </div>
+            <div id="PKKDiv" style="display: none">
+                <h2>Program Kegiatan dan Keuangan</h2>
+                <h5>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Velit aliquet sagittis id consectetur purus ut.
+                    Convallis aenean et tortor at risus viverra adipiscing.
+                    Etiam dignissim diam quis enim lobortis scelerisque.
+                    Neque laoreet suspendisse interdum consectetur libero.
+                    Suspendisse potenti nullam ac tortor vitae purus faucibus.
+                    Enim praesent elementum facilisis leo vel fringilla.
+                    Eget dolor morbi non arcu risus quis.
+                    Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque
+                    eleifend. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit.
+                    Cras sed felis eget velit aliquet sagittis id.
+                    Facilisi etiam dignissim diam quis enim lobortis.
+                    Non blandit massa enim nec dui nunc mattis enim.
+                    Sem integer vitae justo eget magna fermentum iaculis eu non.
+                    Egestas sed sed risus pretium quam vulputate dignissim.
+                </h5>
+                <h5>
+                    Commodo ullamcorper a lacus vestibulum. Rhoncus mattis rhoncus urna neque.
+                    Diam phasellus vestibulum lorem sed. Bibendum at varius vel pharetra.
+                    In vitae turpis massa sed elementum tempus egestas sed.
+                    Purus faucibus ornare suspendisse sed nisi.
+                    Eget magna fermentum iaculis eu non diam phasellus.
+                    Faucibus pulvinar elementum integer enim.
+                    Mattis vulputate enim nulla aliquet.
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam.
+                    Est velit egestas dui id. Cursus sit amet dictum sit amet justo donec.
+                    Quis risus sed vulputate odio ut. Posuere morbi leo urna molestie at elementum eu.
+                    Et tortor at risus viverra adipiscing at.
+                </h5>
+            </div>
+            <div id="IPBDiv" style="display: none">
+                <h2>Informasi Pengadaan Barang</h2>
+                <h5>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Velit aliquet sagittis id consectetur purus ut.
+                    Convallis aenean et tortor at risus viverra adipiscing.
+                    Etiam dignissim diam quis enim lobortis scelerisque.
+                    Neque laoreet suspendisse interdum consectetur libero.
+                    Suspendisse potenti nullam ac tortor vitae purus faucibus.
+                    Enim praesent elementum facilisis leo vel fringilla.
+                    Eget dolor morbi non arcu risus quis.
+                    Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque
+                    eleifend. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit.
+                    Cras sed felis eget velit aliquet sagittis id.
+                    Facilisi etiam dignissim diam quis enim lobortis.
+                    Non blandit massa enim nec dui nunc mattis enim.
+                    Sem integer vitae justo eget magna fermentum iaculis eu non.
+                    Egestas sed sed risus pretium quam vulputate dignissim.
+                </h5>
+                <h5>
+                    Commodo ullamcorper a lacus vestibulum. Rhoncus mattis rhoncus urna neque.
+                    Diam phasellus vestibulum lorem sed. Bibendum at varius vel pharetra.
+                    In vitae turpis massa sed elementum tempus egestas sed.
+                    Purus faucibus ornare suspendisse sed nisi.
+                    Eget magna fermentum iaculis eu non diam phasellus.
+                    Faucibus pulvinar elementum integer enim.
+                    Mattis vulputate enim nulla aliquet.
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam.
+                    Est velit egestas dui id. Cursus sit amet dictum sit amet justo donec.
+                    Quis risus sed vulputate odio ut. Posuere morbi leo urna molestie at elementum eu.
+                    Et tortor at risus viverra adipiscing at.
+                </h5>
+            </div>
+            <div id="IKMDiv" style="display: none">
+                <h2>Index Kepuasan Masyarakat</h2>
+                <h5>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Velit aliquet sagittis id consectetur purus ut.
+                    Convallis aenean et tortor at risus viverra adipiscing.
+                    Etiam dignissim diam quis enim lobortis scelerisque.
+                    Neque laoreet suspendisse interdum consectetur libero.
+                    Suspendisse potenti nullam ac tortor vitae purus faucibus.
+                    Enim praesent elementum facilisis leo vel fringilla.
+                    Eget dolor morbi non arcu risus quis.
+                    Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque
+                    eleifend. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit.
+                    Cras sed felis eget velit aliquet sagittis id.
+                    Facilisi etiam dignissim diam quis enim lobortis.
+                    Non blandit massa enim nec dui nunc mattis enim.
+                    Sem integer vitae justo eget magna fermentum iaculis eu non.
+                    Egestas sed sed risus pretium quam vulputate dignissim.
+                </h5>
+                <h5>
+                    Commodo ullamcorper a lacus vestibulum. Rhoncus mattis rhoncus urna neque.
+                    Diam phasellus vestibulum lorem sed. Bibendum at varius vel pharetra.
+                    In vitae turpis massa sed elementum tempus egestas sed.
+                    Purus faucibus ornare suspendisse sed nisi.
+                    Eget magna fermentum iaculis eu non diam phasellus.
+                    Faucibus pulvinar elementum integer enim.
+                    Mattis vulputate enim nulla aliquet.
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam.
+                    Est velit egestas dui id. Cursus sit amet dictum sit amet justo donec.
+                    Quis risus sed vulputate odio ut. Posuere morbi leo urna molestie at elementum eu.
+                    Et tortor at risus viverra adipiscing at.
+                </h5>
+            </div>
+            <div id="MSPDiv" class="d" style="display: none">
+                <h2>Maklumat Standar Pelayanan</h2>
+                <h5>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Velit aliquet sagittis id consectetur purus ut.
+                    Convallis aenean et tortor at risus viverra adipiscing.
+                    Etiam dignissim diam quis enim lobortis scelerisque.
+                    Neque laoreet suspendisse interdum consectetur libero.
+                    Suspendisse potenti nullam ac tortor vitae purus faucibus.
+                    Enim praesent elementum facilisis leo vel fringilla.
+                    Eget dolor morbi non arcu risus quis.
+                    Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque
+                    eleifend. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit.
+                    Cras sed felis eget velit aliquet sagittis id.
+                    Facilisi etiam dignissim diam quis enim lobortis.
+                    Non blandit massa enim nec dui nunc mattis enim.
+                    Sem integer vitae justo eget magna fermentum iaculis eu non.
+                    Egestas sed sed risus pretium quam vulputate dignissim.
+                </h5>
+                <h5>
+                    Commodo ullamcorper a lacus vestibulum. Rhoncus mattis rhoncus urna neque.
+                    Diam phasellus vestibulum lorem sed. Bibendum at varius vel pharetra.
+                    In vitae turpis massa sed elementum tempus egestas sed.
+                    Purus faucibus ornare suspendisse sed nisi.
+                    Eget magna fermentum iaculis eu non diam phasellus.
+                    Faucibus pulvinar elementum integer enim.
+                    Mattis vulputate enim nulla aliquet.
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam.
+                    Est velit egestas dui id. Cursus sit amet dictum sit amet justo donec.
+                    Quis risus sed vulputate odio ut. Posuere morbi leo urna molestie at elementum eu.
+                    Et tortor at risus viverra adipiscing at.
+                </h5>
+            </div>
+            <div id="UMDiv" class="d" style="display: none">
+                <h2>Usulan Masyarakat</h2>
+                <h5>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Velit aliquet sagittis id consectetur purus ut.
+                    Convallis aenean et tortor at risus viverra adipiscing.
+                    Etiam dignissim diam quis enim lobortis scelerisque.
+                    Neque laoreet suspendisse interdum consectetur libero.
+                    Suspendisse potenti nullam ac tortor vitae purus faucibus.
+                    Enim praesent elementum facilisis leo vel fringilla.
+                    Eget dolor morbi non arcu risus quis.
+                    Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque
+                    eleifend. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit.
+                    Cras sed felis eget velit aliquet sagittis id.
+                    Facilisi etiam dignissim diam quis enim lobortis.
+                    Non blandit massa enim nec dui nunc mattis enim.
+                    Sem integer vitae justo eget magna fermentum iaculis eu non.
+                    Egestas sed sed risus pretium quam vulputate dignissim.
+                </h5>
+                <h5>
+                    Commodo ullamcorper a lacus vestibulum. Rhoncus mattis rhoncus urna neque.
+                    Diam phasellus vestibulum lorem sed. Bibendum at varius vel pharetra.
+                    In vitae turpis massa sed elementum tempus egestas sed.
+                    Purus faucibus ornare suspendisse sed nisi.
+                    Eget magna fermentum iaculis eu non diam phasellus.
+                    Faucibus pulvinar elementum integer enim.
+                    Mattis vulputate enim nulla aliquet.
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam.
+                    Est velit egestas dui id. Cursus sit amet dictum sit amet justo donec.
+                    Quis risus sed vulputate odio ut. Posuere morbi leo urna molestie at elementum eu.
+                    Et tortor at risus viverra adipiscing at.
+                </h5>
+            </div>
+    </div>
 </div>
 </section>
